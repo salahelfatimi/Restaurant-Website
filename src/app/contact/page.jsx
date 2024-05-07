@@ -5,9 +5,9 @@ export default function Contact() {
   return (
     <>
  
-    <div className=" bg-[url('/image/bg.png')] min-h-screen">
-      
-      <div className="relative w-full h-[35rem] ">
+    <div className=" bg-[url('/image/bg.png')] bg-cover relative min-h-screen">
+    <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
+      <div className="relative  w-full h-[35rem] ">
         <iframe
           className="absolute top-0 left-0 w-full h-full"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8829.481718946325!2d-7.994081773104437!3d31.63355027918627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee51028d33b7%3A0xd2c7530c07060fd5!2sJardin%20Majorelle!5e0!3m2!1sen!2sma!4v1651758907823!5m2!1sen!2sma"

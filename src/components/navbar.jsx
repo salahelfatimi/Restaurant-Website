@@ -19,7 +19,7 @@ export default function Navbar(){
         <>
         <div className=" bg-white py-4    fixed   right-0 left-0 lg:block z-40">
             <div className=" flex justify-between items-center container px-4 ">
-                <span className="flex flex-col items-center text-black font-bold "><span className=" bg-[#f39c12] px-2 text-white">Restaurant</span> <span className=" text-[#f39c12]">S-C-H</span></span>
+                <h1 className="flex flex-col items-center text-black font-bold "><span className=" bg-[#f39c12] px-2 text-white">Restaurant</span> <span className=" text-[#f39c12]">S-C-H</span></h1>
                 <div className="lg:block hidden">
                     <ul className=" flex    gap-4">
                         {

@@ -20,8 +20,9 @@ export default function BookTable({bookingShow , setBookingShow}){
     
       const timeSlots = generateTimeSlots();
     return(
-        <div className={`z-50  fixed px-4 bg-black/20  bg-[url('/image/bg.png')] items-center flex  flex-col justify-center inset-0  duration-700 transition   ${bookingShow?'-translate-y-0':'-translate-y-full'}`}>
-                <div className="bg-white  py-4 px-8 flex flex-col items-center gap-6 ">
+        <div className={`z-50  fixed px-4 bg-black/20  bg-[url('/image/bg.png')] bg-cover items-center flex  flex-col justify-center inset-0  duration-700 transition   ${bookingShow?'-translate-y-0':'-translate-y-full'}`}>
+              <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
+                <div className="bg-white  py-4 px-8 flex flex-col items-center gap-6 z-10">
                     <button onClick={()=>{setBookingShow(!bookingShow)}}><PanelTopClose size={30} className=" text-red-600 animate-bounce " /></button>
                     <span className=" font-bold text-[#f39c12] border-y-[#f39c12]  border-y-4 ">BOOKING</span>
                     <h1 className=" font-bold text-2xl text-[#1a2f33] ">Book a Table</h1>
