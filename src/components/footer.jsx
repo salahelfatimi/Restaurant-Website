@@ -1,7 +1,9 @@
 export default function Footer(){
     return(
         <>
-        Footer
+        <div className="bg-[url('/image/bg.png')] ">
+            footer
+        </div>
         
         </>
     )
