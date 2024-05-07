@@ -1,6 +1,7 @@
 import Image from "next/image";
 import food from '/public/image/food.png'
 import newsLetter from '/public/image/newsLetter.png'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
           <span className=" font-bold text-white flex items-center gap-2"><span className=" border-t-4 border-t-[#f39c12] w-10"></span>HELLO</span>
           <h1 className="    text-white  lg:text-7xl text-5xl font-serif font-extrabold    "><span className="flex flex-col gap-4 text-white">Reserve Your<span>Table Today</span></span>  </h1>
           <div className=" flex gap-6 items-center">
-            <button className="text-white font-bold w-fit bg-[#f39c12] py-3 px-6 text-lg rounded hover:bg-[#f39c12]/60  duration-500  ">Reserve a table</button>
-            <span className=" text-white font-medium text-sm">OPEN MENU</span>
+            <button className="text-white font-bold w-fit bg-[#f39c12] border-[#f39c12] border-4 py-3 px-4 text-lg rounded hover:bg-[#f39c12]/0  hover:border-[#f39c12]  duration-500  ">Reserve a table</button>
+            <Link href={'#'} className=" text-white font-medium text-sm hover:text-[#f39c12] duration-500">OPEN MENU</Link>
           </div>
 
         </div>
@@ -46,7 +47,7 @@ export default function Home() {
         <span className="font-bold text-white text-2xl lg:text-3xl font-serif">Subscribe our newsletter</span>  
         <div className=" flex gap-2">
           <input type="text" className=" py-3 w-full placeholder:text-sm placeholder:font-light rounded px-6" placeholder=" Entre your email here"  />
-          <button className="text-white text-sm font-bold bg-[#f39c12] py-3 px-1 rounded hover:bg-[#f39c12]/60  duration-500 ">SUBSCRIBE</button>
+          <button className="text-white font-bold bg-[#f39c12] py-3 px-2 text-sm rounded hover:bg-[#f39c12]/0 border-[#f39c12] border-4 hover:border-[#f39c12] hover:text-[#f39c12]    duration-500  ">SUBSCRIBE</button>
         </div>
         
       </div>  
