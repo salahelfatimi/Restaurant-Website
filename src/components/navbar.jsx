@@ -12,7 +12,7 @@ export default function Navbar(){
   
     const itemNav=[
         {title:'Home',href:'/'},
-        {title:'Menu',href:'#'},
+        {title:'Menu',href:'/menu'},
         {title:'Contact',href:'/contact'}
     ]
     return(

@@ -59,7 +59,7 @@ export default function Contact() {
         </div>
       
       </div>
-      </div>
+    </div>
     </>
   );
 }
