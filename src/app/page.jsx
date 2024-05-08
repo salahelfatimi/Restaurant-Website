@@ -5,7 +5,9 @@ import newsLetter from '/public/image/newsLetter.png'
 import Link from "next/link";
 import { useState } from "react";
 import BookTable from "@/components/boking/bookTable";
-
+import menu1 from '/public/image/menu/menu1.png'
+import menu2 from '/public/image/menu/menu2.png'
+import menu3 from '/public/image/menu/menu3.png'
 export default function Home() {
   const [bookingShow,setBookingShow]=useState(false)
   return (
@@ -35,7 +37,112 @@ export default function Home() {
       </div>
       <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
     </div>
-    
+    <div className="bg-[url('/image/bg.png')] bg-cover relative z-10 ">
+    <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
+      <div className=" relative z-10 pt-44 gap-6 flex flex-col container items-center ">
+        <span className=" font-bold text-white  border-t-[#f39c12]  border-t-4  ">MENU</span>  
+          <div className=" bg-white p-10 grid grid-cols-1 gap-10 ">
+            <div className=' flex flex-col lg:flex-row gap-4 items-center '>
+              <Image
+                src={menu1}
+                placeholder="blur"
+                quality={100}
+                width={200}
+                height={200}
+                className=" rounded "
+                alt="Picture of the author"
+              />
+              <div className=' flex flex-col gap-2 justify-center'>
+                <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                <p className='  font-extralight text-gray-600'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+              </div>
+              <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+              </div>
+                      <div className=' flex flex-col lg:flex-row-reverse gap-4 items-center '>
+                          <Image
+                              src={menu2}
+                              placeholder="blur"
+                              quality={100}
+                              width={200}
+                              height={200}
+                              className=" rounded "
+                              alt="Picture of the author"
+                          />
+                          <div className=' flex flex-col gap-2 justify-center'>
+                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+                          </div>
+                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+                      </div>
+                      <div className=' flex flex-col lg:flex-row gap-4 items-center '>
+                          <Image
+                              src={menu3}
+                              placeholder="blur"
+                              quality={100}
+                              width={200}
+                              height={200}
+                              className=" rounded "
+                              alt="Picture of the author"
+                          />
+                          <div className=' flex flex-col gap-2 justify-center'>
+                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+                          </div>
+                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+                      </div>
+                      <div className=' flex flex-col lg:flex-row-reverse  gap-4 items-center '>
+                          <Image
+                              src={menu1}
+                              placeholder="blur"
+                              quality={100}
+                              width={200}
+                              height={200}
+                              className=" rounded "
+                              alt="Picture of the author"
+                          />
+                          <div className=' flex flex-col  gap-2 justify-center'>
+                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                              <p className='  font-extralight text-gray-600'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+                          </div>
+                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+                      </div>
+                      <div className=' flex flex-col lg:flex-row gap-4 items-center '>
+                          <Image
+                              src={menu2}
+                              placeholder="blur"
+                              quality={100}
+                              width={200}
+                              height={200}
+                              className=" rounded "
+                              alt="Picture of the author"
+                          />
+                          <div className=' flex flex-col gap-2 justify-center'>
+                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+                          </div>
+                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+                      </div>
+                      <div className=' flex items-center flex-col lg:flex-row-reverse  gap-4  '>
+                          <Image
+                              src={menu3}
+                              placeholder="blur"
+                              quality={100}
+                              width={200}
+                              height={200}
+                              className=" rounded "
+                              alt="Picture of the author"
+                          />
+                          <div className=' flex flex-col gap-2 justify-center'>
+                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
+                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
+                          </div>
+                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
+                    
+                      </div>
+
+                  </div>
+      </div>
+    </div>
     <div>
       <div className="  flex justify-center py-10  relative bg-[url('/image/bg.png')] bg-cover ">
         <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>

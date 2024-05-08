@@ -24,7 +24,7 @@ export default function Navbar(){
                     <ul className=" flex    gap-4">
                         {
                             itemNav.map((ele,index)=>(
-                                <li key={index} className={` font-bold hover:text-[#f39c12] duration-500 ${pathname == ele.href ? 'text-[#f39c12]' : 'text-black'}`}>
+                                <li key={index} className={` font-bold hover:text-[#f39c12] duration-500 ${pathname == ele.href ? 'text-[#f39c12] border-b-4 border-[#f39c12]' : 'text-black'}`}>
                                 <Link href={ele.href}>{ele.title}</Link>
                                 </li>
                             ))
@@ -51,7 +51,7 @@ export default function Navbar(){
                 <ul className=" flex flex-col gap-10">
                 {itemNav.map((ele, index) => (
                     <button onClick={() => {setOpen(!open);}}key={index}>
-                        <li key={index} className={` font-bold hover:text-[#f39c12] duration-500 ${pathname == ele.href ? 'text-[#f39c12]' : 'text-black'}`}>
+                        <li key={index} className={` font-bold hover:text-[#f39c12] duration-500 ${pathname == ele.href ? 'text-[#f39c12] border-b-4 border-[#f39c12]' : 'text-black'}`}>
                             <Link href={ele.href}>{ele.title}</Link>
                         </li>
                     </button>
