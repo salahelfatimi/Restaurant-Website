@@ -1,3 +1,7 @@
+export const metadata = {
+    title: "Menu",
+    
+  };
 export default function Menu(){
     return(
         <>

@@ -1,6 +1,9 @@
 import { Mailbox, MapPinned, Phone } from "lucide-react";
 import Link from "next/link";
-
+export const metadata = {
+    title: "Contact",
+    
+  };
 export default function Contact() {
   return (
     <>
@@ -10,12 +13,7 @@ export default function Contact() {
       <div className="relative  w-full h-[35rem] ">
         <iframe
           className="absolute top-0 left-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8829.481718946325!2d-7.994081773104437!3d31.63355027918627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee51028d33b7%3A0xd2c7530c07060fd5!2sJardin%20Majorelle!5e0!3m2!1sen!2sma!4v1651758907823!5m2!1sen!2sma"
-          frameBorder="0"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108702.95891174128!2d-8.090253858529149!3d31.63474114960496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakesh!5e0!3m2!1sen!2sma!4v1715129402991!5m2!1sen!2sma" width="600" height="450"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <div className=" px-4 lg:px-[10rem] drop-shadow-xl relative bottom-44 p-12 ">
@@ -49,7 +47,7 @@ export default function Contact() {
                             <input type="email" name="email" placeholder="Email" id="" className=" shadow border   text-sm rounded-lg   w-full px-8 py-3 " />
                             <input type="text" name="Tell" placeholder="Tell" id="" className=" shadow border   text-sm rounded-lg   w-full px-8 py-3 " />
                             <textarea name="message" placeholder="message" className="shadow border  lg:col-span-2 text-sm rounded-lg px-8 py-3   w-full" cols={10} rows={10}  id=""></textarea>
-                            <button className="text-white font-bold bg-[#f39c12] lg:col-span-2    py-3 px-6 text-lg rounded hover:bg-black  duration-500 hover:text-[#fff] ">Send a message</button>
+                            <button className="text-white font-bold lg:col-span-2 w-full bg-[#f39c12] border-[#f39c12] border-4 py-3 px-4 text-lg rounded hover:bg-[#f39c12]/0 hover:text-[#f39c12]   hover:border-[#f39c12]  duration-500  ">Send a message</button>
 
                         </div>
                   
