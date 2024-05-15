@@ -7,10 +7,19 @@ import { useState } from "react";
 import BookTable from "@/components/boking/bookTable";
 import Menu from "./components/menuItem";
 import LatestBlog from "./blog/components/latestBlog";
+import menu1 from '/public/image/menu/menu1.png'
+import menu2 from '/public/image/menu/menu2.png'
+import menu3 from '/public/image/menu/menu3.png'
 
 export default  function Home() {
   const [bookingShow,setBookingShow]=useState(false)
   // await new Promise((resolve)=>setTimeout(resolve,3000))
+  const menu=[
+    {id:1,title:'Paella with seafood',description:'Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.',prix:' 6.88 $',image:menu1},
+    {id:2,title:'Paella with seafood',description:'Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.',prix:' 5.88 $',image:menu2},
+    {id:3,title:'Paella with seafood',description:'Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.',prix:' 4.88 $',image:menu3},
+    {id:4,title:'Paella with seafood',description:'Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.',prix:' 8.88 $',image:menu1},
+    ]
   return (
     <>
     <BookTable bookingShow={bookingShow} setBookingShow={setBookingShow}/>
@@ -44,7 +53,7 @@ export default  function Home() {
         <span className=" font-bold text-white text-2xl lg:text-5xl  border-t-[#f39c12]  border-t-4  ">Latest Updates</span>  
         <div className="bg-white flex flex-col py-4 items-center gap-8">
           <LatestBlog/>
-          <Link className=" font-bold uppercase bg-[#f39c12] text-white px-4 py-2 hover:bg-white hover:text-[#f39c12]  border-white border-4 hover:border-[#f39c12] duration-700" href='/menu'>see More Blogs</Link>
+          <Link className=" font-bold uppercase bg-[#f39c12] text-white px-4 py-2 hover:bg-white hover:text-[#f39c12]  border-white border-4 hover:border-[#f39c12] duration-700" href='/blog'>see More Blogs</Link>
         </div>
        
        
@@ -55,7 +64,7 @@ export default  function Home() {
       <div className=" relative  z-10 pt-44 gap-6 flex flex-col container items-center ">
         <span className=" font-bold text-white text-2xl lg:text-5xl  border-t-[#f39c12]  border-t-4   ">MENU</span>  
         <div className="bg-white flex flex-col py-4 items-center gap-8">
-          <Menu/>
+          <Menu menu={menu}/>
           <Link className=" font-bold uppercase bg-[#f39c12] text-white px-4 py-2 hover:bg-white hover:text-[#f39c12]  border-white border-4 hover:border-[#f39c12] duration-700" href='/menu'>see More</Link>
         </div>
        
