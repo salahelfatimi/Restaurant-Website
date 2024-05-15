@@ -1,18 +1,20 @@
 'use client'
 import BookTable from "@/components/boking/bookTable";
-import { PanelLeftClose, PanelRightClose, PanelTopClose } from "lucide-react";
+import { PanelLeftClose, PanelRightClose, PanelTopClose, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar(){
     const [open, setOpen] = useState(true);
+    const [cart,setCart]=useState(1)
     const [bookingShow,setBookingShow]=useState(false)
     const pathname=usePathname()
   
     const itemNav=[
         {title:'Home',href:'/'},
         {title:'Menu',href:'/menu'},
+        {title:'Blog',href:'/blog'},
         {title:'Contact',href:'/contact'}
     ]
     return(
@@ -35,9 +37,18 @@ export default function Navbar(){
                     </ul>
                 </div>
                 
-                <button onClick={()=>(setBookingShow(!bookingShow))} className="text-white font-bold hidden lg:block bg-[#f39c12] py-2 px-2  rounded hover:bg-[#f39c12]/0 border-[#f39c12] border-4 hover:border-[#f39c12] hover:text-[#f39c12]    duration-500  ">Booking a table</button>
-                <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}>{open?<PanelLeftClose size={35} className=" text-[#f39c12]  " />: <PanelRightClose size={35} className=" text-[#f39c12]  "/>}</button>
-
+                <div className="flex gap-6">
+                    <button className={`${pathname !== '/menu'&&'hidden'} bg-[#fff] relative p-2 rounded-full lg:min-w-12 flex items-center justify-center`}>
+                        <din className={`absolute -top-1 bg-[#f39c12] rounded-full animate-bounce text-white px-1 text-xs right-0`}>
+                            {cart}
+                        </din>
+                        <ShoppingCart size={30} className=' stroke-[#f39c12] ' />
+                    </button>
+                    <button onClick={()=>(setBookingShow(!bookingShow))} className="text-white font-bold hidden lg:block bg-[#f39c12] py-2 px-2  rounded hover:bg-[#f39c12]/0 border-[#f39c12] border-4 hover:border-[#f39c12] hover:text-[#f39c12]    duration-500  ">Booking a table</button>
+                    <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}>{open?<PanelLeftClose size={35} className=" text-[#f39c12]  " />: <PanelRightClose size={35} className=" text-[#f39c12]  "/>}</button>
+                   
+                </div>
+                
             </div>
 
         </div>
@@ -57,8 +68,10 @@ export default function Navbar(){
                     </button>
                 ))}
                 </ul>
+                
                 <button onClick={()=>(setBookingShow(!bookingShow),setOpen(!open))} className="text-white font-bold block lg:hidden bg-[#f39c12] py-2 px-2  rounded hover:bg-[#f39c12]/0 border-[#f39c12] border-4 hover:border-[#f39c12] hover:text-[#f39c12]    duration-500  ">Booking a table</button>
             </div>
+            
             </div>
         </div>
         

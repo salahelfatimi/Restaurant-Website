@@ -2,9 +2,10 @@ import { Mailbox, MapPinned, Phone } from "lucide-react";
 import Link from "next/link";
 export const metadata = {
     title: "Contact",
-    
+    description:'Contact with Us'
   };
 export default function Contact() {
+  
   return (
     <>
  

@@ -5,11 +5,12 @@ import newsLetter from '/public/image/newsLetter.png'
 import Link from "next/link";
 import { useState } from "react";
 import BookTable from "@/components/boking/bookTable";
-import menu1 from '/public/image/menu/menu1.png'
-import menu2 from '/public/image/menu/menu2.png'
-import menu3 from '/public/image/menu/menu3.png'
-export default function Home() {
+import Menu from "./components/menuItem";
+import LatestBlog from "./blog/components/latestBlog";
+
+export default  function Home() {
   const [bookingShow,setBookingShow]=useState(false)
+  // await new Promise((resolve)=>setTimeout(resolve,3000))
   return (
     <>
     <BookTable bookingShow={bookingShow} setBookingShow={setBookingShow}/>
@@ -30,7 +31,7 @@ export default function Home() {
           <h1 className="    text-white  lg:text-7xl text-5xl font-serif font-extrabold    "><span className="flex flex-col gap-4 text-white">Reserve Your<span>Table Today</span></span>  </h1>
           <div className=" flex gap-6 items-center">
             <button onClick={()=>(setBookingShow(!bookingShow))} className="text-white font-bold w-fit bg-[#f39c12] border-[#f39c12] border-4 py-3 px-4 text-lg rounded hover:bg-[#f39c12]/0  hover:border-[#f39c12]  duration-500  ">Reserve a table</button>
-            <Link href={'#'} className=" text-white font-medium text-sm hover:text-[#f39c12] duration-500">OPEN MENU</Link>
+            <Link href={'/menu'} className=" text-white font-medium text-sm hover:text-[#f39c12] duration-500">OPEN MENU</Link>
           </div>
 
         </div>
@@ -39,108 +40,26 @@ export default function Home() {
     </div>
     <div className="bg-[url('/image/bg.png')] bg-cover relative z-10 ">
     <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
-      <div className=" relative z-10 pt-44 gap-6 flex flex-col container items-center ">
-        <span className=" font-bold text-white  border-t-[#f39c12]  border-t-4  ">MENU</span>  
-          <div className=" bg-white p-10 grid grid-cols-1 gap-10 ">
-            <div className=' flex flex-col lg:flex-row gap-4 items-center '>
-              <Image
-                src={menu1}
-                placeholder="blur"
-                quality={100}
-                width={200}
-                height={200}
-                className=" rounded "
-                alt="Picture of the author"
-              />
-              <div className=' flex flex-col gap-2 justify-center'>
-                <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                <p className='  font-extralight text-gray-600'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-              </div>
-              <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-              </div>
-                      <div className=' flex flex-col lg:flex-row-reverse gap-4 items-center '>
-                          <Image
-                              src={menu2}
-                              placeholder="blur"
-                              quality={100}
-                              width={200}
-                              height={200}
-                              className=" rounded "
-                              alt="Picture of the author"
-                          />
-                          <div className=' flex flex-col gap-2 justify-center'>
-                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-                          </div>
-                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-                      </div>
-                      <div className=' flex flex-col lg:flex-row gap-4 items-center '>
-                          <Image
-                              src={menu3}
-                              placeholder="blur"
-                              quality={100}
-                              width={200}
-                              height={200}
-                              className=" rounded "
-                              alt="Picture of the author"
-                          />
-                          <div className=' flex flex-col gap-2 justify-center'>
-                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-                          </div>
-                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-                      </div>
-                      <div className=' flex flex-col lg:flex-row-reverse  gap-4 items-center '>
-                          <Image
-                              src={menu1}
-                              placeholder="blur"
-                              quality={100}
-                              width={200}
-                              height={200}
-                              className=" rounded "
-                              alt="Picture of the author"
-                          />
-                          <div className=' flex flex-col  gap-2 justify-center'>
-                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                              <p className='  font-extralight text-gray-600'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-                          </div>
-                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-                      </div>
-                      <div className=' flex flex-col lg:flex-row gap-4 items-center '>
-                          <Image
-                              src={menu2}
-                              placeholder="blur"
-                              quality={100}
-                              width={200}
-                              height={200}
-                              className=" rounded "
-                              alt="Picture of the author"
-                          />
-                          <div className=' flex flex-col gap-2 justify-center'>
-                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-                          </div>
-                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-                      </div>
-                      <div className=' flex items-center flex-col lg:flex-row-reverse  gap-4  '>
-                          <Image
-                              src={menu3}
-                              placeholder="blur"
-                              quality={100}
-                              width={200}
-                              height={200}
-                              className=" rounded "
-                              alt="Picture of the author"
-                          />
-                          <div className=' flex flex-col gap-2 justify-center'>
-                              <h2 className=' font-bold font-serif text-2xl'>Paella with seafood</h2>
-                              <p className='  font-extralight'>Lorem, ipsum, dolor, amet, consectetur, adipisicing elit.</p>
-                          </div>
-                          <span className=' font-bold whitespace-nowrap bg-[#f39c12] text-white p-1'>  8.88 $</span>
-                    
-                      </div>
-
-                  </div>
+      <div className=" relative  z-10 pt-44 gap-6 flex flex-col container items-center ">
+        <span className=" font-bold text-white text-2xl lg:text-5xl  border-t-[#f39c12]  border-t-4  ">Latest Updates</span>  
+        <div className="bg-white flex flex-col py-4 items-center gap-8">
+          <LatestBlog/>
+          <Link className=" font-bold uppercase bg-[#f39c12] text-white px-4 py-2 hover:bg-white hover:text-[#f39c12]  border-white border-4 hover:border-[#f39c12] duration-700" href='/menu'>see More Blogs</Link>
+        </div>
+       
+       
+      </div>
+    </div>
+    <div className="bg-[url('/image/bg.png')] bg-cover relative z-10 ">
+    <div className=" bg-[#0a1a1e]/60 inset-0 absolute z-0   "></div>
+      <div className=" relative  z-10 pt-44 gap-6 flex flex-col container items-center ">
+        <span className=" font-bold text-white text-2xl lg:text-5xl  border-t-[#f39c12]  border-t-4   ">MENU</span>  
+        <div className="bg-white flex flex-col py-4 items-center gap-8">
+          <Menu/>
+          <Link className=" font-bold uppercase bg-[#f39c12] text-white px-4 py-2 hover:bg-white hover:text-[#f39c12]  border-white border-4 hover:border-[#f39c12] duration-700" href='/menu'>see More</Link>
+        </div>
+       
+       
       </div>
     </div>
     <div>
