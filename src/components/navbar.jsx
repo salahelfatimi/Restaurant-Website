@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Navbar(){
     const [open, setOpen] = useState(true);
-    const [cart,setCart]=useState(1)
+    const [cart,setCart]=useState(10)
     const [bookingShow,setBookingShow]=useState(false)
     const pathname=usePathname()
   
