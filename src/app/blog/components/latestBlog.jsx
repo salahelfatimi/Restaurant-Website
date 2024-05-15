@@ -19,8 +19,9 @@ export default function LatestBlog(){
                     />
                 </div>
                 <div className=' lg:w-1/2 flex flex-col gap-8 px-4 '>
+                    <p className='bg-[#f39c12] text-white font-bold p-2 w-fit '>New</p>
                     <div className=' flex flex-col justify-between items-center gap-8 '>
-                        <h2 className=' font-bold text-2xl lg:text-4xl'>{menu.title}</h2>
+                        <h2 className=' font-bold text-2xl lg:text-4xl text-center md:text-left'>{menu.title}</h2>
                         <p className='  font-extralight text-gray-600 text-center md:text-left line-clamp-4 '>{menu.description}</p>
                     </div>
                     <Link  href={'blog/Paella with seafood'} className=' text-center  font-bold uppercase   px-4 py-2  text-[#f39c12]   border-4 border-[#f39c12] duration-700'>See More </Link>        

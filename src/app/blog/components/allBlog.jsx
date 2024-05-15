@@ -38,7 +38,7 @@ export default function AllBlog(){
                         </div>
                         <div className='  flex flex-col gap-8 px-4 '>
                             <div className=' flex flex-col justify-between items-center gap-8 '>
-                                <h2 className=' font-bold text-2xl lg:text-4xl'>{ele.title}</h2>
+                                <h2 className=' font-bold text-xl lg:text-2xl text-center md:text-left'>{ele.title}</h2>
                                 <p className='  font-extralight text-gray-600 text-center md:text-left line-clamp-4 '>{ele.description}</p>
                             </div>
                             <Link href={'blog/Paella with seafood'} className=' text-center  font-bold uppercase   px-4 py-2  text-[#f39c12]   border-4 border-[#f39c12] duration-700'>See More </Link>        
